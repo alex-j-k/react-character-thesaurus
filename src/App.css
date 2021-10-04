@@ -227,11 +227,11 @@
                                                               width: 30%;
                                                               background-color: ;
                                                             }
-                                                            .similarCharacterPinyin{
+                                                            .similarCharactersPinyin{
                                                               width: 30%;
                                                               background-color: ;
                                                             }
-                                                            .similarCharacterMeaning{
+                                                            .similarCharactersMeaning{
                                                               width: 30%;
                                                               background-color: ;
                                                             }
@@ -268,7 +268,7 @@
 /*TRANSITION FADE IN */
 .item-enter {
   opacity: 0;
-transition: 1s;
+transition: 0.5s;
 background: none;
 }
 .item-enter-active {
@@ -280,7 +280,7 @@ background: none;
 
 .item-exit {
   transform: translateX(-120%);
-transition: 1s;
+transition: 0.5s;
 }
 
 .item-exit-active {

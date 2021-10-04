@@ -40,10 +40,10 @@ const SimilarCharactersCard = (
                                                   <div className="similarCharacterRadicals">
                                                       {eachRadicalInfo[0].radical}
                                                   </div>
-                                                  <div className="similarCharacterPinyin">
+                                                  <div className="similarCharactersPinyin">
                                                   {eachRadicalInfo[0].pinyin}
                                                   </div>
-                                                  <div className="similarCharacterMeaning">
+                                                  <div className="similarCharactersMeaning">
                                                   {eachRadicalInfo[0].meaning}
                                                   </div>
                                        </div>

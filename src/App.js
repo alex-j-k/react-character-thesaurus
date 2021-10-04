@@ -227,8 +227,15 @@ const [clickedCharacter, setClickedCharacter ] = useState('');
 
 //HANDLER FUNCTIONS
 const handleClick = (e) => {
- setClickedCharacter(clickedCharacter == e.target.id ? '' : e.target.id)
+ setClickedCharacter(clickedCharacter == e.target.id ? '' : e.target.id);
+ const section = document.getElementById(`${e.target.id}`);
+ section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+// const scrollToSection = () => {
+//   const section = document.getElementById(`${clickedCharacter}`);
+//   section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+//  }
 
 //CONSTS
 
