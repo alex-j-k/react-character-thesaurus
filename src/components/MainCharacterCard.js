@@ -8,7 +8,8 @@ const MainCharacterCard = (
         arraysOfCharacters,
         handleClick,
         characterspop,
-        clickedCharacter
+        clickedCharacter,
+        searchTerm
     }
 
 ) => {
@@ -25,12 +26,20 @@ const MainCharacterCard = (
                                 listOfCharacterInfo.char==individualCharacter ? 
                                 // if its the same, RETURN...
                                 <React.Fragment>
-                                    <div className="everything">
+                                    <div 
+                                    className=
+                                    {(`everything ${listOfCharacterInfo.pinyin.includes(searchTerm) ? "" : 'displaynone'}` )}>
                                             <div className=
                                             {listOfCharacterInfo.char == clickedCharacter ? "mainCharacterCardClicked" : "mainCharacterCard"}
                                             onClick={handleClick} 
                                             id={listOfCharacterInfo.char}>
-                                                        <div className="mainCharacter"> {listOfCharacterInfo.char}</div>
+                                                        <div className=
+                                                        {(`mainCharacter ${listOfCharacterInfo.pinyin.includes('1') ? "red" : 
+                                                                            listOfCharacterInfo.pinyin.includes('2') ? "green" :
+                                                                            listOfCharacterInfo.pinyin.includes('3') ? "purple" :
+                                                                            listOfCharacterInfo.pinyin.includes('4') ? "blue" :
+                                                        ''}` )}
+                                                        > {listOfCharacterInfo.char}</div>
                                                         <div className="mainCharacterPinyin"> {listOfCharacterInfo.pinyin}</div>
                                                         <div className="mainCharacterMeaning"> {listOfCharacterInfo.meaning}</div>
                                                         <div className="listOfSimilarCharacters">{eachArray}</div>

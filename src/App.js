@@ -1,6 +1,8 @@
-import './App.css';
+import './css/App.css';
 import React, { useState } from 'react';
 import MainCharacterCard from './components/MainCharacterCard';
+import SearchBar from './SearchBar';
+import Header from './components/Header';
 
 
 ////////////////////////////////////////////////
@@ -138,10 +140,10 @@ const characterspop = [
 
 { char:'裁',  pinyin: 'cai2',            meaning:'To cut',                      rad: [[土],[衣],[戈]]},
 { char:'栽',  pinyin: 'zai1',            meaning:'To Grow',                     rad: [[土],[木rad],[戈]]},
-{ char:'载',  pinyin: 'zai4 (zai3)', meaning:'To Load (Write Down)',    rad: [[土],[车],[戈]]},
+{ char:'载',  pinyin: 'zai3 (zai4)',      meaning:'Write Down (To Load)',    rad: [[土],[车],[戈]]},
 
 { char: '彻', pinyin: 'che4',             meaning: 'Thorough',                           rad:[  [彳],[七],[刀]  ]},
-{ char: '切', pinyin: 'qie1 (qie4)',  meaning:   'Cut (Eager)',                   rad:[ [七],[刀]  ]},
+{ char: '切', pinyin: 'qie1 (qie4)',      meaning:   'Cut (Eager)',                   rad:[ [七],[刀]  ]},
 { char: '窃', pinyin: 'qie4',             meaning:   'Steal',                              rad:[  [穴rad],[七],[刀]  ]},
 
 { char: '惭', pinyin: 'can2',             meaning:   'Ashamed',                            rad:[  [忄],[斩rad]  ]},
@@ -225,11 +227,22 @@ const characterspop = [
 //STATE
 const [clickedCharacter, setClickedCharacter ] = useState('');
 
-//HANDLER FUNCTIONS
+const [searchTerm, setSearchTerm] = useState('');
+
+
+//HANDLER FUNCTIONS - MAIN CHARACTER CLICK AND SCROLL
 const handleClick = (e) => {
  setClickedCharacter(clickedCharacter == e.target.id ? '' : e.target.id);
  const section = document.getElementById(`${e.target.id}`);
  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+//SEARCHBAR SETSTATE
+const handleChange =(e)=> {
+  setSearchTerm(e.target.value);
+
+  //Close any open cards on typing change
+  setClickedCharacter('');
 }
 
 // const scrollToSection = () => {
@@ -242,11 +255,14 @@ const handleClick = (e) => {
 //HTML RETURN
   return (
     <div className="App">
+          <Header></Header>
+          <SearchBar handleChange={handleChange}></SearchBar>
           <MainCharacterCard
           arraysOfCharacters={arraysOfCharacters}
           characterspop={characterspop}
           clickedCharacter={clickedCharacter}
           handleClick={handleClick}
+          searchTerm={searchTerm}
           ></MainCharacterCard>
 
           

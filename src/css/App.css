@@ -1,6 +1,9 @@
-.App {
-  text-align: center;
+/*SHANGHAI FONT*/
+@font-face {
+  font-family: 'shanghai';
+  src: url('../font/shanghai.ttf');
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -41,15 +44,59 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  margin-top: -10px;
 
   background-color: skyblue;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 1000px;
 }
+
+.header{
+  width: 80%;
+  background-color: cornflowerblue;
+  padding: 10px;
+  color: yellow;
+  letter-spacing: 5px;
+
+  margin-top: -150px;
+  /* position: fixed; */
+  z-index: 997;
+}
+.title
+{
+  font-family: 'shanghai';
+  font-size: 3rem;
+  margin-bottom: 5px;
+  margin-top: 20px;
+
+  /* position: fixed;
+  z-index: 998; */
+
+}
+/*SEARCHBAR*/
+.searchbar{
+  /* margin-top: -45px !important; */
+
+  width: 80%;
+  padding: 10px;
+  background-color: rgb(131, 129, 129);
+  /* position: fixed; */
+  /* margin-top: 95px; */
+
+}
+
+.searchinput{
+  width: 80%;
+  height: 40px;
+}
+
 /*EVERYTHING*/
 .everything{
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background-color: white;
   width: 60%;
 }
@@ -114,7 +161,6 @@
         margin: 3%;
         font-size: 2rem;
         margin-right: 6%;
-
 
       }
       .listOfSimilarCharacters{
@@ -237,9 +283,25 @@
                                                             }
 
 
+/*CLASSES TO BE ADDED */
+
+.red{
+  color: rgb(187, 25, 25);
+}
+.green{
+  color: darkgreen;
+}
+.purple{
+  color: rgb(143, 23, 143);
+}
+.blue{
+  color: blue;
+}
 
 
-
+.displaynone{
+display: none;
+}
 
 
 

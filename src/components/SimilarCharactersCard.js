@@ -22,8 +22,13 @@ const SimilarCharactersCard = (
               eachSingleArray.map(eachIndividualSimilarCharacter =>
 
          <div className={listOfCharacterInfo.char == clickedCharacter ? "similarCharacterCard" : "similarCharacterCardNotVisible"} >
-                    <div className="similarCharacter">
-                        {eachIndividualSimilarCharacter}
+                    <div className=
+                    {(`similarCharacter ${characterspop.map(cinfo=>cinfo.char == eachIndividualSimilarCharacter && cinfo.pinyin.includes('1') ? 'red' : 
+                    cinfo.char == eachIndividualSimilarCharacter && cinfo.pinyin.includes('2') ? 'green' :
+                    cinfo.char == eachIndividualSimilarCharacter && cinfo.pinyin.includes('3') ? 'purple' :
+                    cinfo.char == eachIndividualSimilarCharacter && cinfo.pinyin.includes('4') ? 'blue' :
+                    null).join('')}` )}
+                    >{eachIndividualSimilarCharacter}
                     </div>
                { // FOR EACH CHARCTER IN ARRAY OF SIMILAR CHARATERS MAP AND FIND EXPANDED CHARACTER INFO
                   characterspop.map(listOfCharacterInfo => 
