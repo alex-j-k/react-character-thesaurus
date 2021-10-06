@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import MainCharacterCard from './components/MainCharacterCard';
 import SearchBar from './SearchBar';
 import Header from './components/Header';
+import Quiz from './components/Quiz';
 
 
 ////////////////////////////////////////////////
@@ -264,8 +265,11 @@ const handleChange =(e)=> {
           handleClick={handleClick}
           searchTerm={searchTerm}
           ></MainCharacterCard>
-
           
+          <Quiz
+            arraysOfCharacters={arraysOfCharacters}
+            characterspop={characterspop}
+          ></Quiz>
 
     </div>
 );
