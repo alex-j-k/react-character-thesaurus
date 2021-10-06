@@ -6,26 +6,43 @@ const AnswerButtons = (
         handleAnswerClick,
         submitted,
         selectedAnswer,
-        randomCharacter
+        randomCharacter,
+        correctAnswer,
+        
     }
 ) => {
     console.log(currentArray);
+
     return (  
         <div className="answerbuttons">
                  {//ANSWER BUTTONS
-                currentArray.map(eachCharacter => {
+                currentArray.map(eachCharacter => { 
                     return <button 
-                    // className={(`answerbutton ${submitted && eachCharacter == randomCharacter ? 'correct' 
-                    // : submitted && eachCharacter !== randomCharacter ? '' 
-                    // : submitted && eachCharacter == selectedAnswer ? 'incorrect': ''}`)}
-                    className={(`answerbutton ${ eachCharacter == randomCharacter ? 'correct' 
-                    : submitted && eachCharacter == selectedAnswer ? 'incorrect' : ''}`)}
+                   
+                    // className={(`answerbutton ${ eachCharacter == randomCharacter ? 'correct' 
+                    // : submitted && eachCharacter == selectedAnswer ? 'incorrect' : ''}
+                    
+                    className={(`answerbutton ${ eachCharacter == correctAnswer ? 'correct' 
+                    : submitted && eachCharacter == selectedAnswer ? 'incorrect' : ''}
+                    
+                    
+                    `)}
 
 
-                    id={eachCharacter}
+                            id={eachCharacter}
                              onClick={handleAnswerClick}
-                             disabled={submitted == true}>ran{randomCharacter}
-                             each{eachCharacter}</button>
+                            disabled={submitted == true}>
+                                
+                                {/* correct
+                                {correctAnswer}
+
+                                ran
+                                {randomCharacter} */}
+
+                                {/* each */}
+                                {eachCharacter}
+                                
+                                </button>
                  }
                  )
                  }

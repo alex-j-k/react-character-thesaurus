@@ -6,7 +6,7 @@ import QuestionGroup from './QuestionGroup';
 import QuestionPM from './QuestionPM';
 import StartButton from './StartButton';
 
-
+////////////////////////////////////////////////////
 const Quiz = (
     {
         arraysOfCharacters,
@@ -21,7 +21,7 @@ const Quiz = (
     const [ correctNumber, setCorrectNumber ] = useState('');
     const [ submitted, setSubmitted ] = useState(false);
     const [ finishedGame, setFinishedGame ] = useState(true);
-    
+    const [correctAnswer, setCorrectAnswer] = useState('a');
 
    
    //FIND THE CURRENT ARRAY USED FOR QUESTIONS
@@ -48,6 +48,8 @@ const handleStartClick = () => {
     setTotalQuestionNumber(tqn);
     setCorrectNumber(0);
 
+
+
 }
 
 // CLICK ANSWER FOR EACH QUESTION
@@ -58,10 +60,15 @@ const handleAnswerClick = (e) => {
     setSelectedAnswer(e.target.id);
     setSubmitted(true);
     console.log(randomCharacter);console.log(randomCharacter);console.log(randomCharacter);
+    // setCurrentQuestionNumber(currentQuestionNumber + 1);
+    setCorrectAnswer(randomCharacter);
+
+
 } else {
         setSelectedAnswer(e.target.id);
         setSubmitted(true);    
         console.log(randomCharacter);console.log(randomCharacter);console.log(randomCharacter);
+        setCorrectAnswer(randomCharacter);
 
     }
 
@@ -72,6 +79,10 @@ const handleNextClick =() =>{
     setSubmitted(false);
     setCurrentQuestionNumber(currentQuestionNumber + 1);
     setSelectedAnswer('');
+
+
+
+
     if (currentQuestionNumber  == totalQuestionNumber-1){
         setFinishedGame(true);     
         setCurrentQuestionNumber(0);    
@@ -81,10 +92,10 @@ const handleNextClick =() =>{
     return (
 <div className="quiz">
                            
-                { finishedGame  ? <StartButton handleStartClick={handleStartClick} correctNumber={correctNumber} totalQuestionNumber={totalQuestionNumber}>START</StartButton>:
+                { finishedGame  ? <StartButton handleStartClick={handleStartClick} correctNumber={correctNumber} totalQuestionNumber={totalQuestionNumber} >START</StartButton>:
     <React.Fragment>
         <div className='info'>
-                <QuestionPM characterspop={characterspop} randomCharacter={randomCharacter}></QuestionPM>
+                <QuestionPM characterspop={characterspop} randomCharacter={randomCharacter} submitted={submitted} correctAnswer={correctAnswer}></QuestionPM>
                 <QuestionGroup currentQuestionNumber={currentQuestionNumber} totalQuestionNumber={totalQuestionNumber} correctNumber={correctNumber}></QuestionGroup>
         </div>
 
@@ -92,7 +103,14 @@ const handleNextClick =() =>{
 
 
 
-                <AnswerButtons currentArray={currentArray} handleAnswerClick={handleAnswerClick} submitted={submitted} selectedAnswer={selectedAnswer} randomCharacter={randomCharacter}></AnswerButtons>
+                <AnswerButtons currentArray={currentArray} 
+                handleAnswerClick={handleAnswerClick} 
+                submitted={submitted} 
+                selectedAnswer={selectedAnswer} 
+                randomCharacter={randomCharacter} 
+                correctAnswer={correctAnswer}>
+                    setCorrectAnswer={setCorrectAnswer}
+                </AnswerButtons>
 
                 <NextButton submitted={submitted} handleNextClick={handleNextClick}></NextButton>
 
