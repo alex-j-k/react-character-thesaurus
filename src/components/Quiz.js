@@ -31,12 +31,10 @@ const Quiz = (
    //USE RANDOM NUMBER TO CHOOSE RANDOM CHARACTER OF ARRAY TO BE QUESTION
     const randomCharacter = currentArray[randomNumber];
     console.log(randomCharacter);
-    console.log(randomCharacter);
-    console.log(randomCharacter);
-    console.log(randomCharacter);
-    console.log(randomCharacter);
-    console.log(randomCharacter);
+    
+    //BACKGOUND IMAGE CLASSES
 
+    const imgClasses =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u'];
 
     //THE TOTAL NUMBER OF QUESTIONS
     const tqn = arraysOfCharacters.length;
@@ -90,7 +88,7 @@ const handleNextClick =() =>{
 }
 
     return (
-<div className="quiz">
+<div className={`quiz`}>
                            
                 { finishedGame  ? <StartButton handleStartClick={handleStartClick} correctNumber={correctNumber} totalQuestionNumber={totalQuestionNumber} >START</StartButton>:
     <React.Fragment>

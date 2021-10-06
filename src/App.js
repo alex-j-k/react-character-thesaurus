@@ -199,8 +199,8 @@ const characterspop = [
 { char: '夕', pinyin: 'xi1',              meaning:     'Dusk',                                      rad: [[夕rad]  ]},
 
 { char: '生', pinyin: 'sheng1',           meaning:       'Life',                        rad: [ [牛rad],[一]   ]},
-{ char: '牛', pinyin: 'niu2',             meaning:     'Afternoon',                         rad: [ [亻],[十rad]   ]},
-{ char: '午', pinyin: 'wu3',              meaning:     'Cow',                           rad: [ [亻],[十rad]  ]},
+{ char: '牛', pinyin: 'niu2',             meaning:     'Cow',                         rad: [ [亻],[十rad]   ]},
+{ char: '午', pinyin: 'wu3',              meaning:     'Afternoon',                           rad: [ [亻],[十rad]  ]},
 
 { char: '期', pinyin: 'qi1',              meaning:     'Period',                                rad: [ [其rad],[月rad]    ]},
 { char: '欺', pinyin: 'qi1',              meaning:     'Deceive',                                 rad: [ [其rad],[欠]   ]},

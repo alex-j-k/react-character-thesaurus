@@ -365,9 +365,9 @@ transition: 0.5s;
 
 /*QUIZ STARTS HERE*/
 .quiz{
-  background-image: url('../images/1.jpg');
+  /* background-image: url('../images/1.jpg'); */
 
-  background-color: tomato;
+  background-color: lightgray;
   background-size: cover;
   background-position: center;
 height: 100vh;
@@ -402,6 +402,58 @@ justify-content: space-evenly;
 .f{
   background-image: url('../images/6.jpg');
 }
+.g{
+  background-image: url('../images/7.jpg');
+}
+.h{
+  background-image: url('../images/8.jpg');
+}
+.i{
+  background-image: url('../images/9.jpg');
+}
+.j{
+  background-image: url('../images/10.jpg');
+}
+.k{
+  background-image: url('../images/11.jpg');
+}
+.l{
+  background-image: url('../images/12.jpg');
+}
+.m{
+  background-image: url('../images/13.jpg');
+}
+.n{
+  background-image: url('../images/14.jpg');
+}
+.o{
+  background-image: url('../images/15.jpg');
+}
+.p{
+  background-image: url('../images/16.jpg');
+}
+.q{
+  background-image: url('../images/17.jpg');
+}
+.r{
+  background-image: url('../images/18.jpg');
+}
+.s{
+  background-image: url('../images/19.jpg');
+}
+.t{
+  background-image: url('../images/20.jpg');
+}
+.u{
+  background-image: url('../images/21.jpg');
+}
+
+
+
+
+
+
+
 
 /*START AND NEXT BUTTONS*/
 .startbutton{
