@@ -585,3 +585,37 @@ const App = () => {
     }
     
     export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div className={`quiz ${imgClasses[Math.floor(Math.random()*21)]}   `}></div>
