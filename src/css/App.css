@@ -742,6 +742,7 @@ img{
 .pinyinAndMeaning{
   flex-direction: column;
   justify-content: space-evenly;
+  font-size: 0.5rem;
 }
 
 .allRadicals{
@@ -807,7 +808,7 @@ flex-direction: column;
   flex-direction: row;
 }
 #return{
-  margin-left: 60px;
+  margin-left: 10px;
 }
 #returncc{
   margin-left: 0px;
