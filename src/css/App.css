@@ -258,7 +258,7 @@ border: yellow 1px solid;
                                         font-weight: bolder;
                                         align-items: center;
                                         /* background-color: lightgrey; */
-                                        width: 40%;
+                                        width: 25%;
                                       }
                                       .similarCharacterMeaning{
                                       font-size: 1.5em;
@@ -792,7 +792,7 @@ i{
   margin-bottom: 5px;
 }
 .quiztext{
-  margin-left: 15px;
+  margin-left: 5px;
   margin-top: 0;
 font-size: 1.3rem;
 }
@@ -811,7 +811,7 @@ flex-direction: column;
   margin-left: 60px;
 }
 #returncc{
-  margin-left: 40px;
+  margin-left: 0px;
 }
 #returnsym{
   transform: scale(80%);
