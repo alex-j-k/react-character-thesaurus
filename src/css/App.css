@@ -245,7 +245,7 @@ border: yellow 1px solid;
                             }
                             .similarCharacter{
                               /* background-color: orange; */
-                              margin: 20px;
+                              margin: 10px;
                               font-size: 2.5em;
                               background-color: rgb(171, 220, 240);
                               border-radius: 50%;
@@ -649,7 +649,7 @@ cursor: initial;
   position: fixed;
   padding: 1%;
   cursor: pointer;
-  width: 200px;
+  width: 180px;
 
 
   box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
@@ -683,7 +683,18 @@ i{
   size: 20px;
 }
 
-
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
 /*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
 @media only screen and (max-width: 600px) {
 
@@ -714,14 +725,25 @@ img{
 }
 .similarCharacterCard{
   width: 90%;
+  border: 2px solid darkgray;
+}
+.similarEverything{
+  height: auto;
+}
+.similarCharacterInfo{
+  justify-content: space-evenly;
 }
 
 .pinyinAndMeaning{
   flex-direction: column;
   font-size: 0.8rem;
   justify-content: space-evenly;
+  width: auto;
 }
 
+.allRadicals{
+  justify-content: space-evenly;
+}
 
 
 
@@ -734,6 +756,7 @@ position: fixed;
 display: flex;
 flex-direction:row;
 border-radius: 8px;
+padding-bottom: 20px;
 
 box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
 0 2px 4px rgba(0,0,0,0.07), 
@@ -829,8 +852,11 @@ margin: 5px;
 /*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*/
 
 .mainCharacterCard{
-  width: 85%;
+  width: 90%;
   height: 60px;
+  border: 5px solid darkgray;
+  padding: 15px;
+  
 }
 .mainCharacter{
   font-size: 2rem;
@@ -839,6 +865,11 @@ margin: 5px;
 
 .pm{
   flex-direction: column;
+  justify-content: start;
+}
+
+.pml{
+  justify-content: ;
 }
 .mainCharacterPinyin{
 font-size: 1.2rem;
@@ -849,6 +880,7 @@ font-size: 1.2rem;
 
 .listOfSimilarCharacters{
   font-size: 1.2rem;
+  justify-content: flex-start;
 }
 
 

@@ -98,8 +98,8 @@ const handleNextClick =() =>{
                 :
     <React.Fragment>
         <div className='info'>
-                <QuestionPM characterspop={characterspop} randomCharacter={randomCharacter} submitted={submitted} correctAnswer={correctAnswer}></QuestionPM>
                 <QuestionGroup currentQuestionNumber={currentQuestionNumber} totalQuestionNumber={totalQuestionNumber} correctNumber={correctNumber}></QuestionGroup>
+                <QuestionPM characterspop={characterspop} randomCharacter={randomCharacter} submitted={submitted} correctAnswer={correctAnswer}></QuestionPM>
         </div>
 
          <div className="questioncard" id='ans'>
