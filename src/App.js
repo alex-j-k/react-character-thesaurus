@@ -1,13 +1,16 @@
 import './css/App.css';
-import React, { useState } from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+import React, { useState, useEffect } from 'react';
 import MainCharacterCard from './components/MainCharacterCard';
 import SearchBar from './SearchBar';
 import Header from './components/Header';
 import Quiz from './components/Quiz';
 
 
+
 //////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
 
 const App = () => {
@@ -234,9 +237,12 @@ const [searchTerm, setSearchTerm] = useState('');
 //HANDLER FUNCTIONS - MAIN CHARACTER CLICK AND SCROLL
 const handleClick = (e) => {
  setClickedCharacter(clickedCharacter == e.target.id ? '' : e.target.id);
+ console.log(e.target.id)
  const section = document.getElementById(`${e.target.id}`);
  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+
 
 //SEARCHBAR SETSTATE
 const handleChange =(e)=> {
@@ -253,25 +259,39 @@ const handleChange =(e)=> {
 
 //CONSTS
 
+
+
+
+
+
 //HTML RETURN
   return (
-    <div className="App">
-          <Header></Header>
-          <SearchBar handleChange={handleChange}></SearchBar>
-          <MainCharacterCard
-          arraysOfCharacters={arraysOfCharacters}
-          characterspop={characterspop}
-          clickedCharacter={clickedCharacter}
-          handleClick={handleClick}
-          searchTerm={searchTerm}
-          ></MainCharacterCard>
-          
-          <Quiz
-            arraysOfCharacters={arraysOfCharacters}
-            characterspop={characterspop}
-          ></Quiz>
+    <Router>
+          <div className="App">
+                
+                      <Switch>
+                               <Route exact path="/">
+                               <Header></Header>
+                                        <SearchBar handleChange={handleChange}></SearchBar>
+                                        <MainCharacterCard
+                                        arraysOfCharacters={arraysOfCharacters}
+                                        characterspop={characterspop}
+                                        clickedCharacter={clickedCharacter}
+                                        handleClick={handleClick}
+                                        searchTerm={searchTerm}
+                                        ></MainCharacterCard>
+                                        <img/>
+                               </Route>
 
-    </div>
+                               <Route exact path="/quiz">
+                                        <Quiz
+                                          arraysOfCharacters={arraysOfCharacters}
+                                          characterspop={characterspop}
+                                        ></Quiz>
+                                </Route>
+                      </Switch>
+          </div>
+      </Router>
 );
 }
 

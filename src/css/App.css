@@ -50,8 +50,9 @@
   background-color: skyblue;
   text-align: center;
   padding-top: 150px;
-  padding-bottom: 1000px;
+
 }
+
 
 .header{
   width: 80%;
@@ -115,6 +116,20 @@
   height: 80px;
   align-items: center;
 
+  cursor: pointer;
+}
+
+.pml{
+  display: inherit;
+  width: 100%;
+  align-items: center;
+  pointer-events: none;
+
+}
+.pm{
+  display: inherit;
+  width: 40%;
+  pointer-events: none;
 
 }
 
@@ -134,10 +149,15 @@
   /* outline: yellow solid 5px; */
 }
 
+.mainCharacterCard:hover{
+  cursor: pointer;
+  /* color: yellow; */
+border: yellow 1px solid;
+}
+
 .mainCharacterCard:active{
   transform: scale(96%);
   border: solid 1px blue;
-
 }
       .mainCharacter{
       pointer-events: none;
@@ -151,14 +171,14 @@
       .mainCharacterPinyin{
         pointer-events: none;
         font-weight: bolder;
-        margin: 3%;
+        margin-left: 10%;
         font-size: 2rem;
 
 
       }
       .mainCharacterMeaning{
         pointer-events: none;
-        margin: 3%;
+        margin-left: 10%;
         font-size: 2rem;
         margin-right: 6%;
 
@@ -167,6 +187,7 @@
         pointer-events: none;
         font-size: 1.5rem;
         letter-spacing: 20px;
+        margin-left: 5%;
 
 
       }
@@ -366,6 +387,8 @@ transition: 0.5s;
 /*QUIZ STARTS HERE*/
 .quiz{
   /* background-image: url('../images/1.jpg'); */
+  position: fixed;
+  top: 0;
 
   background-color: lightgray;
   background-size: cover;
@@ -376,6 +399,7 @@ width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
+
 
 }
 
@@ -389,6 +413,15 @@ justify-content: space-evenly;
 
 .c{
   background-image: url('../images/3.jpg');
+  
+}
+
+/*GREAT WALL IMAGE*//*GREAT WALL IMAGE*//*GREAT WALL IMAGE*//*GREAT WALL IMAGE*//*GREAT WALL IMAGE*//*GREAT WALL IMAGE*//*GREAT WALL IMAGE*/
+img{
+  width: 100%;
+  height: 1000px;
+  content:url('../images/3.jpg');
+
 }
 
 .d{
@@ -534,6 +567,11 @@ opacity: 0.8;
 cursor: initial;
 }
 
+.answerbutton:hover{
+  color: yellow;
+  transform: scale(0.98);
+  }
+
 .correct{
   background: linear-gradient(90deg, #56FFA4, #59BC86);
 }
@@ -593,4 +631,228 @@ cursor: initial;
   background: linear-gradient(90deg, #56ccff, #6eafb4);
   border: 3px solid #ffffff;
   border-radius: 10px;
+}
+
+
+
+
+
+/*QUIZ THESAURUS TOGGLE*/ /*QUIZ THESAURUS TOGGLE*//*QUIZ THESAURUS TOGGLE*//*QUIZ THESAURUS TOGGLE*//*QUIZ THESAURUS TOGGLE*//*QUIZ THESAURUS TOGGLE*//*QUIZ THESAURUS TOGGLE*/
+
+.quizthesaurustoggle{
+  background-color: cornflowerblue;
+  border: 8px solid darkgray;
+  border-bottom: none;
+  right: 30px;
+  bottom: 0;
+  position: absolute;
+  position: fixed;
+  padding: 1%;
+  cursor: pointer;
+  width: 200px;
+
+
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+  0 2px 4px rgba(0,0,0,0.07), 
+  0 4px 8px rgba(0,0,0,0.07), 
+  0 8px 16px rgba(0,0,0,0.07),
+  0 16px 32px rgba(0,0,0,0.07), 
+  0 32px 64px rgba(0,0,0,0.07);
+}
+
+.quizthesaurustoggle:hover{
+  border: 3px yellow solid;
+}
+.quizthesaurustoggle:active{
+  color: red;
+}
+
+.text{
+  pointer-events: none;
+}
+.quiztext{
+
+  font-size: 2rem;
+  color: yellow;
+  font-family: shanghai;
+  pointer-events: none;
+}
+
+i{
+  color: yellow;
+  size: 20px;
+}
+
+
+/*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*//*MEDIA*/
+@media only screen and (max-width: 600px) {
+
+img{
+  visibility: hidden;
+}
+
+.title{
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+.header{
+  padding-bottom: 5px;
+}
+
+/*SIMILAR CHARACTER CARDS*//*SIMILAR CHARACTER CARDS*//*SIMILAR CHARACTER CARDS*//*SIMILAR CHARACTER CARDS*//*SIMILAR CHARACTER CARDS*//*SIMILAR CHARACTER CARDS*//*SIMILAR CHARACTER CARDS*/
+
+.everything{
+  width: 100%;
+}
+.tg{
+  width: 100%;
+}
+.everythingsimilar{
+  width: 100%;
+}
+.similarCharacterCard{
+  width: 90%;
+}
+
+.pinyinAndMeaning{
+  flex-direction: column;
+  font-size: 0.8rem;
+  justify-content: space-evenly;
+}
+
+
+
+
+/*QUIZ TOGGLE BUTTON*//*QUIZ TOGGLE BUTTON*//*QUIZ TOGGLE BUTTON*//*QUIZ TOGGLE BUTTON*//*QUIZ TOGGLE BUTTON*//*QUIZ TOGGLE BUTTON*//*QUIZ TOGGLE BUTTON*/
+.quizthesaurustoggle{
+  right: 2.5%;
+height: 7%;
+width: 90%;
+position: fixed;
+display: flex;
+flex-direction:row;
+border-radius: 8px;
+
+box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+0 2px 4px rgba(0,0,0,0.07), 
+0 4px 8px rgba(0,0,0,0.07), 
+0 8px 16px rgba(0,0,0,0.07),
+0 16px 32px rgba(0,0,0,0.07), 
+0 32px 64px rgba(0,0,0,0.07);
+}
+
+
+i{
+  margin-top: 4px;
+  margin-left: 0px;
+  transform: scale(90%);
+}
+.take{
+  margin-left: 20px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin-bottom: 0;
+}
+.text{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.quiztext{
+  margin-left: 15px;
+  margin-top: 0;
+font-size: 1.3rem;
+}
+
+
+.rmc{
+display: flex;
+flex-direction: column;
+}
+
+.returnmain{
+  display: flex;
+  flex-direction: row;
+}
+#return{
+  margin-left: 60px;
+}
+#returncc{
+  margin-left: 40px;
+}
+#returnsym{
+  transform: scale(80%);
+}
+
+/*ACTUAL QUIZ*//*ACTUAL QUIZ*//*ACTUAL QUIZ*//*ACTUAL QUIZ*//*ACTUAL QUIZ*//*ACTUAL QUIZ*//*ACTUAL QUIZ*//*ACTUAL QUIZ*//*ACTUAL QUIZ*//*ACTUAL QUIZ*//*ACTUAL QUIZ*/
+.quiz{
+flex-direction: column;
+height: 92vh;
+padding-bottom: 100px;
+}
+
+.dynamicquestion{
+}
+.qpmnormalfont{
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.questionPM{
+  padding: 0;
+}
+
+.qpm{
+  font-size: 1rem;
+  padding: 10px;
+margin: 5px;
+
+}
+
+.questioncard{
+  padding: 0;
+}
+
+.answerbutton{
+  font-size: 1.8rem;
+  height: 50px;
+}
+
+.ans{
+  padding-bottom: 80px;
+}
+
+/*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*//*CHARCTER CARD*/
+
+.mainCharacterCard{
+  width: 85%;
+  height: 60px;
+}
+.mainCharacter{
+  font-size: 2rem;
+
+}
+
+.pm{
+  flex-direction: column;
+}
+.mainCharacterPinyin{
+font-size: 1.2rem;
+}
+.mainCharacterMeaning{
+  font-size: 1.2rem;
+}
+
+.listOfSimilarCharacters{
+  font-size: 1.2rem;
+}
+
+
+
+
+/*media enq.closure*/
 }

@@ -4,6 +4,7 @@ import AnswerButtons from './AnswerButtons';
 import NextButton from './NextButton';
 import QuestionGroup from './QuestionGroup';
 import QuestionPM from './QuestionPM';
+import QuizThesaurusToggle from './QuizThesaurausToggle';
 import StartButton from './StartButton';
 
 ////////////////////////////////////////////////////
@@ -90,14 +91,18 @@ const handleNextClick =() =>{
     return (
 <div className={`quiz`}>
                            
-                { finishedGame  ? <StartButton handleStartClick={handleStartClick} correctNumber={correctNumber} totalQuestionNumber={totalQuestionNumber} >START</StartButton>:
+                { finishedGame  ? <React.Fragment>
+                                    <StartButton handleStartClick={handleStartClick} correctNumber={correctNumber} totalQuestionNumber={totalQuestionNumber} >START</StartButton>
+                                    <QuizThesaurusToggle></QuizThesaurusToggle>
+                                    </React.Fragment>
+                :
     <React.Fragment>
         <div className='info'>
                 <QuestionPM characterspop={characterspop} randomCharacter={randomCharacter} submitted={submitted} correctAnswer={correctAnswer}></QuestionPM>
                 <QuestionGroup currentQuestionNumber={currentQuestionNumber} totalQuestionNumber={totalQuestionNumber} correctNumber={correctNumber}></QuestionGroup>
         </div>
 
-         <div className="questioncard">
+         <div className="questioncard" id='ans'>
 
 
 
@@ -113,6 +118,7 @@ const handleNextClick =() =>{
                 <NextButton submitted={submitted} handleNextClick={handleNextClick}></NextButton>
 
         </div>
+        <QuizThesaurusToggle></QuizThesaurusToggle>
     </React.Fragment>                  
                 }
 </div>

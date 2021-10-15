@@ -1,7 +1,9 @@
 import React from 'react'
 import SimilarCharactersCard from './SimilarCharactersCard';
 import {TransitionGroup, CSSTransition } from 'react-transition-group';
-
+import QuizThesaurusToggle from './QuizThesaurausToggle';
+/////////////////////////////////////////////////
+//////////////////////////////////////
 
 const MainCharacterCard = (
     {
@@ -40,9 +42,14 @@ const MainCharacterCard = (
                                                                             listOfCharacterInfo.pinyin.includes('4') ? "blue" :
                                                         ''}` )}
                                                         > {listOfCharacterInfo.char}</div>
-                                                        <div className="mainCharacterPinyin"> {listOfCharacterInfo.pinyin}</div>
-                                                        <div className="mainCharacterMeaning"> {listOfCharacterInfo.meaning}</div>
-                                                        <div className="listOfSimilarCharacters">{eachArray}</div>
+
+                                                        <div className="pml">
+                                                                <div className="pm">
+                                                                        <div className="mainCharacterPinyin"> {listOfCharacterInfo.pinyin}</div>
+                                                                        <div className="mainCharacterMeaning"> {listOfCharacterInfo.meaning}</div>
+                                                                </div>
+                                                                <div className="listOfSimilarCharacters">{eachArray}</div>
+                                                        </div>
                                             </div>
                                     </div>
 
@@ -70,6 +77,7 @@ const MainCharacterCard = (
                                 </React.Fragment>
                             // ELSE RETURN NULL
                             : null )  ))}
+                            <QuizThesaurusToggle></QuizThesaurusToggle>
         </React.Fragment>
      );
 }
