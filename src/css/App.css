@@ -743,7 +743,6 @@ img{
   flex-direction: column;
   font-size: 0.7rem;
   justify-content: space-evenly;
-  width: auto;
 }
 
 .allRadicals{
@@ -822,7 +821,8 @@ flex-direction: column;
 .quiz{
 flex-direction: column;
 height: 92vh;
-padding-bottom: 100px;
+padding-bottom: 000px;
+padding-top: 10px;
 }
 
 .dynamicquestion{
@@ -834,6 +834,7 @@ padding-bottom: 100px;
 
 .questionPM{
   padding: 0;
+  margin: 5px;
 }
 
 .qpm{
@@ -844,12 +845,14 @@ margin: 5px;
 }
 
 .questioncard{
-  padding: 0;
+  padding: 0px;
 }
 
 .answerbutton{
-  font-size: 1.8rem;
-  height: 50px;
+  font-size: 1.2rem;
+  height: 40px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .ans{

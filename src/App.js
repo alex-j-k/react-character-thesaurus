@@ -144,7 +144,7 @@ const characterspop = [
 
 { char:'裁',  pinyin: 'cai2',            meaning:'To cut',                      rad: [[土],[衣],[戈]]},
 { char:'栽',  pinyin: 'zai1',            meaning:'To Grow',                     rad: [[土],[木rad],[戈]]},
-{ char:'载',  pinyin: 'zai3 (zai4)',      meaning:'Write Down (To Load)',    rad: [[土],[车],[戈]]},
+{ char:'载',  pinyin: 'zai3 (zai4)',      meaning:`Write Down (To Load)`,    rad: [[土],[车],[戈]]},
 
 { char: '彻', pinyin: 'che4',             meaning: 'Thorough',                           rad:[  [彳],[七],[刀]  ]},
 { char: '切', pinyin: 'qie1 (qie4)',      meaning:   'Cut (Eager)',                   rad:[ [七],[刀]  ]},
