@@ -728,21 +728,28 @@ img{
   border: 2px solid darkgray;
 }
 .similarEverything{
+  width: 150px;
   height: auto;
+  justify-content: space-evenly;
 }
 .similarCharacterInfo{
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+}
+.similarCharactersMeaning{
+  margin-left: 10px;
 }
 
 .pinyinAndMeaning{
   flex-direction: column;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   justify-content: space-evenly;
   width: auto;
 }
 
 .allRadicals{
   justify-content: space-evenly;
+  font-size: 0.7rem;
+
 }
 
 
