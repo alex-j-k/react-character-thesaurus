@@ -741,13 +741,12 @@ img{
 
 .pinyinAndMeaning{
   flex-direction: column;
-  font-size: 0.7rem;
   justify-content: space-evenly;
 }
 
 .allRadicals{
   justify-content: space-evenly;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 
 }
 
